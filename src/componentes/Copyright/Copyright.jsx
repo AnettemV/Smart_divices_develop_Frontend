@@ -1,15 +1,12 @@
-import { useContext } from "react";
-import { AppContext } from "../Context/AppContext";
+import "./Copyright.css";
 
 function Copyright() {
-    const {copyright} = useContext(AppContext);
-    return (
-        <>
-        
-        <div className="copyright">
-            <p className="copyright__paragraph">{copyright}</p>
-            </div></>
-      );
+  return (
+    <>
+      <div className="copyright"></div>
+      <p className="copyright__paragraph">Copyright</p>
+    </>
+  );
 }
 
 export default Copyright;

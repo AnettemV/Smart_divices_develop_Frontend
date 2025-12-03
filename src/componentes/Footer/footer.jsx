@@ -1,23 +1,12 @@
 
 import "./footer.css";
-import Copyright from "../Copyright/Copyright";
-function Footer({setX1, x1}) {
-    let nombre = "TAMBIEN ES UNA VARIABLE";
-    nombre= "OTRO VALOR";
 
-    return (  
-        <footer>
-            <h1>Componente de React con Estado: {x1}</h1>
-            <p>El nombre= {nombre}</p>
-            <button
-                onClick={ () => {
-                    setX1("Valeria Hernandez Lucia Fernande") 
-                    nombre = "Valeria Hernandez";
-                }}
-            >
-            Actualizar el Estado
-            </button>
-            <Copyright />
+
+function Footer() {
+    return (
+        <footer className="footer">
+            <h3>Desarrollado por Anette Veronica Morones Herrera</h3>
+            <p>Aplicacion Desrrollada en React 18, Node.js, Mongo DB</p>
         </footer>
     );
 }

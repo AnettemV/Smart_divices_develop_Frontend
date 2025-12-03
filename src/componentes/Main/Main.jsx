@@ -1,16 +1,24 @@
-import Jumbotron from "../../Jumbotron";
+import "./Main.css";
+import Profile from "./Profile/Profile";
+import CardContainer from "./CardContainer/CardContainer";
 
-function Main({otronombre}) {
-    return ( 
-         <>
-        
-            
-             <h1>COMPARTIENDO ESTADO {otronombre}</h1>
-             <p>Anette V. Morones</p>
-             <Jumbotron texto = {otronombre} />
-        
-        </>
-     );
-}
+const Main = (props) => {
+  const { cards, handleDeleteCard, handleUpdateCard } = props; // <-- ahora sí lo recibes
 
-export default Main ;
+  return (
+    <main className="main">
+      <section className="traveler">
+        <Profile />
+      </section>
+      <section className="gallery">
+        <CardContainer
+          cards={cards}
+          handleDeleteCard={handleDeleteCard} // <-- ahora sí lo reenvías
+          handleUpdateCard={handleUpdateCard}
+        />
+      </section>
+    </main>
+  );
+};
+
+export default Main;

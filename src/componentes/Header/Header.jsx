@@ -1,22 +1,14 @@
-import Copyright from "../Copyright/Copyright";
+import logo from "../../images/logo-mexico.jpeg"
+
 import "./Header.css";
 
-function Header({ setX1 }) {
-    return ( 
-        <>
-        <header className="header">
-            <h1>Titulo Header</h1>
-            <button
-                onClick={() => {
-                    setX1("VALUE FROM HEADER");
-                }}
-           >
-            CLICK DEL HEADER
-            </button>
-            <Copyright />
-        </header>
-        </>
-     );
+function Header() {
+  return (
+    <header className="header">
+      <img alt="Magical Mexico Logo" className="header__logo" src={logo} />
+        <h1>Mexico Magico</h1>
+    </header>
+  );
 }
 
-export default Header;
+export default Header;
