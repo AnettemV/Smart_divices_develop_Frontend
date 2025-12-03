@@ -3,7 +3,7 @@ import Header from "./componentes/Header/Header";
 import { AppContext } from "./componentes/Context/AppContext"; 
 import "./App.css";
 import Main from "./componentes/Main/Main";
-import Footer from "./componentes/Footer/footer";
+import Footer from "./componentes/Footer/Footer";
 import api from "./dataProvider/api";
 
 function App() {
