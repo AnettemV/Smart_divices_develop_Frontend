@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import Header from "./componentes_temp/Header/Header";
-import { AppContext } from "./componentes_temp/Context/AppContext"; 
+import Header from "./componentes/Header/Header";
+import { AppContext } from "./componentes/Context/AppContext"; 
 import "./App.css";
-import Main from "./componentes_temp/Main/Main";
-import Footer from "./componentes_temp/Footer/Footer";
+import Main from "./componentes/Main/Main";
+import Footer from "./componentes/Footer/Footer";
 import api from "./dataProvider/api";
 
 function App() {
