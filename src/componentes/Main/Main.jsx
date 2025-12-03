@@ -2,16 +2,19 @@ import "./Main.css";
 import Profile from "./Profile/Profile";
 import CardContainer from "./CardContainer/CardContainer";
 
-const Main = ({ cards, handleDeleteCard }) => {
+const Main = (props) => {
+  const { cards, handleDeleteCard, handleUpdateCard } = props; // <-- ahora sí lo recibes
+
   return (
     <main className="main">
       <section className="traveler">
         <Profile />
       </section>
-
       <section className="gallery">
-        <CardContainer 
-          props={{ cards, handleDeleteCard }}
+        <CardContainer
+          cards={cards}
+          handleDeleteCard={handleDeleteCard} // <-- ahora sí lo reenvías
+          handleUpdateCard={handleUpdateCard}
         />
       </section>
     </main>

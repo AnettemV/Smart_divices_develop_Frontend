@@ -34,10 +34,20 @@ function App() {
     .catch((error) => console.error(error));
 }
 async function handleUpdateCard(card) {
+  const likeinvertido = !card.like;
   await api
-    .updateCard(card.id, true)
+    .updateCard(card._id, likeinvertido)
     .then(() => {
-      console.log("Pues aqui va a pasar algo despues de afectar el backend");
+      //card.like = !card,like;
+      const temp  = {...card, like: likeinvertido};
+      console.log(temp);
+
+      //const cartemporal = [{}, {},{}];
+     setCards((prev) => {
+          return prev.map((element) =>{
+            return element._id=== temp._id ? temp: element
+          })
+        })
     })
     .catch((error) => console.error(error));
   }
@@ -52,6 +62,7 @@ async function handleUpdateCard(card) {
           <Main 
             cards={cards} 
             handleDeleteCard={handleDeleteCard} 
+            handleUpdateCard={handleUpdateCard}
           />
 
           <Footer />
